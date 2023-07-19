@@ -1,0 +1,72 @@
+version: '3.7'
+services:
+  mailhog1:
+    image: mailhog/mailhog
+    container_name: ${DOCKER_PROJECT_CODE}-mailhog1
+    logging:
+      driver: 'none'
+    environment:
+      - TZ=Europe/Moscow
+    networks:
+      proxy-pass-a:
+      proxy-pass-b:
+      proxy-pass-c:
+        aliases:
+          - mailhog11
+  mailhog2:
+    image: mailhog/mailhog
+    container_name: ${DOCKER_PROJECT_CODE}-mailhog2
+    logging:
+      driver: 'none'
+    environment:
+      - TZ=Europe/Moscow
+    networks:
+      proxy-pass-a:
+      proxy-pass-b:
+      proxy-pass-c:
+        aliases:
+          - mailhog22
+  mailhog3:
+    image: mailhog/mailhog
+    container_name: ${DOCKER_PROJECT_CODE}-mailhog3
+    logging:
+      driver: 'none'
+    environment:
+      - TZ=Europe/Moscow
+    networks:
+      proxy-pass-a:
+      proxy-pass-b:
+      proxy-pass-c:
+        aliases:
+          - mailhog33
+  mailhog4:
+    image: mailhog/mailhog
+    container_name: ${DOCKER_PROJECT_CODE}-mailhog4
+    logging:
+      driver: 'none'
+    environment:
+      - TZ=Europe/Moscow
+    networks:
+      proxy-pass-a:
+      proxy-pass-b:
+      proxy-pass-c:
+        aliases:
+          - mailhog44
+  mailhog5:
+    image: mailhog/mailhog
+    container_name: ${DOCKER_PROJECT_CODE}-mailhog5
+    logging:
+      driver: 'none'
+    environment:
+      - TZ=Europe/Moscow
+    networks:
+      proxy-pass-a:
+      proxy-pass-b:
+      proxy-pass-c:
+        aliases:
+          - mailhog55
+networks:
+  proxy-pass-a:
+  proxy-pass-b:
+  proxy-pass-c:
+  proxy-pass-d:
